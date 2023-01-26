@@ -1,0 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,500;0,700;1,500&family=Rubik:wght@400;500;600&display=swap");
+
+/*  COLOR SCHEME VARIABLES */
+
+:root {
+  --green-color: #214e34;
+  --orange-color: #e8871e;
+  --red-color: #b3001b;
+  --blue-color: #141640;
+  --white-color: #fefeff;
+  --black-color: black;
+}

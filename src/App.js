@@ -6,7 +6,9 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <Routing />
+      <main className="main-content">
+        <Routing />
+      </main>
       <Footer />
     </div>
   );

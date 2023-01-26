@@ -1,0 +1,13 @@
+.hero__section .swiper-vertical > .swiper-wrapper {
+  height: 400px;
+}
+.hero--section--left .left--bottom,
+.hero--section--left .left--top {
+  height: 200px;
+}
+.hero--section--left .left--bottom {
+  background-color: red;
+}
+.hero--section--left .left--top {
+  background-color: green;
+}
