@@ -225,6 +225,57 @@ span.cart--qty--icon {
   font-size: 25px;
   color: #bf9444;
 }
+/* ////////////////// */
+/* SIDEBAR MENU RESPONSIVE START */
+/* ////////////////// */
+aside.sidebar--menu--mobile {
+  background: white;
+  width: 300px;
+  padding: 2rem 2rem;
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  transition: transform 0.3s ease-in;
+  transform: translate(-100%);
+}
+
+.sidrbar--menu--overlay {
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(rgba(9, 22, 29, 0.9), rgba(9, 22, 29, 0.9));
+  z-index: 9999;
+  opacity: 0;
+  transition: all 0.3s ease-in;
+  visibility: hidden;
+}
+
+.sidebar--logo img {
+  max-height: 30px;
+}
+.clonse--sidebar--icon {
+  text-align: center;
+  background: white;
+  font-size: 22px;
+  padding: 0 1rem;
+  color: black;
+  cursor: pointer;
+  border: 1px solid #bf9444;
+}
+ul.menu--list--for--mobile {
+  padding-top: 20px;
+}
+.menu--list--for--mobile li a {
+  padding: 10px 0;
+  display: block;
+  font-weight: 500;
+  font-size: 1.125rem;
+  color: #09161d;
+}
+.menu--list--for--mobile li a.active {
+  color: #bf9444;
+}
+/* ////////////////////////// */
+/* RESPONSIVE START HERE */
 @media screen and (max-width: 1430px) {
   /* .style-3 {
     padding: 0 30px;
@@ -258,7 +309,6 @@ span.cart--qty--icon {
     width: 50%;
   }
 }
-
 @media screen and (max-width: 1200px) {
   .head--bottom--left .header-logo img {
     max-height: 27px;
@@ -322,7 +372,6 @@ span.cart--qty--icon {
     width: 70%;
   }
 }
-
 @media screen and (max-width: 575px) {
   .top-bar.three .welcome-note p {
     text-align: center;

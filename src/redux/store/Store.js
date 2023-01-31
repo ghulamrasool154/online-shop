@@ -1,7 +1,8 @@
 import { configureStore } from "@reduxjs/toolkit";
-
-export default configureStore({
+import mobileSlice from "../slice/mobileMenuSidebarSlice";
+export const store = configureStore({
   reducer: {
-    productReducer,
+    mobileSlice,
+    productSlice: [1, 2, 3, 4, 5],
   },
 });
