@@ -1,52 +1,42 @@
 import React from "react";
-import { Link, NavLink } from "react-router-dom";
-import logo from "../../../assets/images/logo.png";
+import vectorright from "../../../assets/images/topbar-vec-right.png";
+import vectorleft from "../../../assets/images/topbar-vec-left.png";
+import headerlogo from "../../../assets/images/header2-logo.svg";
 import "./Header.css";
+import { Link } from "react-router-dom";
 const Header = () => {
   return (
     <header>
-      <section className="top--header">
-        <div className="container-xxl top--header">
-          <div className="row align-items-center">
-            <div className="col-lg-3">
-              <Link className="top--left" to="/">
-                <img src={logo} alt="online-shop" />
-                <h3 className="logo--title"> online shop</h3>
-              </Link>
-            </div>
-            <div className="col-lg-6 text-md-center">
-              <div className="top--center">
-                <input
-                  type="text"
-                  className="input-search"
-                  placeholder="Search for product"
-                />
-                <button className="search--btn">
-                  <i className="fa-solid fa-magnifying-glass"></i>
-                </button>
+      <section className="top-bar three">
+        <div className="container-lg container-fluid bg-white">
+          <div className="row p-12 align-items-center position-relative">
+            <div className="col-lg-5 col-md-6 d-flex align-items-center justify-content-md-start justify-content-center d-lg-flex d-md-none">
+              <div className="vector-left">
+                <img src={vectorleft} alt="" />
+              </div>
+              <div className="welcome-note">
+                <p>
+                  Welcome Our Restho Restaurant!{" "}
+                  <a href="reservation.html">For Private Event</a>
+                </p>
               </div>
             </div>
-            <div className="col-lg-3 ">
-              <div className="top--right">
-                <ul className="d-flex nav--right justify-content-end">
+            <div className="col-lg-7 col-md-12 d-md-flex justify-content-lg-end justify-content-center align-items-center d-sm-flex  d-none">
+              <div className="vector-right">
+                <img src={vectorright} alt="" />
+              </div>
+              <div className="contact-info">
+                <ul>
                   <li>
-                    <NavLink to="/login">
-                      <i className="fa-solid fa-user-nurse"></i>
-                      <span>Login</span>
-                    </NavLink>
+                    <a href="mailto:info@example.com">
+                      <i className="bi bi-envelope"></i> info@example.com
+                    </a>
                   </li>
                   <li>
-                    <NavLink to="/sign-up">
-                      <i className="fa-solid fa-user-nurse"></i>
-                      <span>sign up</span>
-                    </NavLink>
-                  </li>
-                  <li>
-                    <NavLink to="/cart" className="cart ">
-                      <i className="fa-solid fa-basket-shopping"></i>
-                      <span className="qty--header">0</span>
-                      <span>Cart</span>
-                    </NavLink>
+                    <a>
+                      <i className="bi bi-geo-alt"></i>Road-01, Block-B, West
+                      London City
+                    </a>
                   </li>
                 </ul>
               </div>
@@ -54,34 +44,77 @@ const Header = () => {
           </div>
         </div>
       </section>
-      <section className="bottom--header">
-        <div className="container-xxl">
-          <div className="row">
-            <div className="col-3">
-              <div className="show--categories">
-                <a> show by categories</a>
+      <section className="header-area global-width style-3">
+        <div className="container-fluid">
+          <div className="row justify-content-between align-items-center">
+            <div className="head--bottom--left">
+              <div className="header-logo">
+                <Link to="/">
+                  <img alt="image" className="img-fluid" src={headerlogo} />
+                </Link>
               </div>
             </div>
-            <div className="col-9">
-              <nav className="main--nav">
-                <ul>
+            <div className="head--bottom--center">
+              <div className="main-menu">
+                <ul className="menu-list">
                   <li>
-                    <NavLink to="/">Home</NavLink>
+                    <a href="#"> Home</a>
                   </li>
-
                   <li>
-                    <NavLink to="/about">about </NavLink>
+                    <a href="about.html">About</a>
                   </li>
-
                   <li>
-                    <NavLink to="/contact">contact</NavLink>
+                    <a href="contact.html">Shop</a>
                   </li>
-
                   <li>
-                    <NavLink to="/shop">shop</NavLink>
+                    <a href="about.html">About</a>
+                  </li>
+                  <li>
+                    <a href="contact.html">Contact</a>
                   </li>
                 </ul>
-              </nav>
+              </div>
+            </div>
+            <div className="head--bottom--right">
+              <ul>
+                <li>
+                  <a href="">
+                    <span className="right--icon">
+                      <i className="bi bi-person-circle" />
+                    </span>
+                    <span className="right--text">Login</span>
+                  </a>
+                </li>
+                <li>
+                  {" "}
+                  <a href="">
+                    <span className="right--icon">
+                      {" "}
+                      <i className="bi bi-r-circle" />
+                    </span>
+                    <span className="right--text">Register</span>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href=""
+                    style={{
+                      position: "relative",
+                    }}
+                  >
+                    <span className="cart--qty--icon">0</span>
+                    <span className="right--icon">
+                      <i className="bi bi-bag-heart" />
+                    </span>
+
+                    <span className="right--text"> Cart</span>
+                  </a>
+                </li>
+
+                <div className="mobile--burgur--icon">
+                  <i className="bi bi-list"></i>
+                </div>
+              </ul>
             </div>
           </div>
         </div>
