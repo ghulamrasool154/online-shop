@@ -10,7 +10,6 @@ const Header = () => {
   const redux = useSelector((state) => state.mobileSlice);
   const dispatch = useDispatch();
 
-  console.log(redux);
   return (
     <>
       <header>
@@ -133,10 +132,21 @@ const Header = () => {
         </section>
       </header>
 
-      <aside className="sidebar--menu--mobile">
+      <aside
+        className={
+          redux.toggleMenu
+            ? "sidebar--menu--mobile show"
+            : "sidebar--menu--mobile"
+        }
+      >
         <div className="sidebar--logo d-flex justify-content-between align-items-center">
           <img src={headerlogo} alt="" />
-          <div className="clonse--sidebar--icon">
+          <div
+            className="clonse--sidebar--icon"
+            onClick={() => {
+              dispatch(toggleMenu());
+            }}
+          >
             <i className="bi bi-arrow-left"></i>
           </div>
         </div>
@@ -165,7 +175,16 @@ const Header = () => {
           </li>
         </ul>
       </aside>
-      <div className="sidrbar--menu--overlay"></div>
+      <div
+        className={
+          redux.toggleMenu
+            ? "sidrbar--menu--overlay"
+            : "sidrbar--menu--overlay hidden"
+        }
+        onClick={() => {
+          dispatch(toggleMenu());
+        }}
+      ></div>
     </>
   );
 };

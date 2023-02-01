@@ -239,17 +239,23 @@ aside.sidebar--menu--mobile {
   transition: transform 0.3s ease-in;
   transform: translate(-100%);
 }
+aside.sidebar--menu--mobile.show {
+  transform: translate(0);
+}
 
 .sidrbar--menu--overlay {
   position: fixed;
   inset: 0;
   background: linear-gradient(rgba(9, 22, 29, 0.9), rgba(9, 22, 29, 0.9));
   z-index: 9999;
-  opacity: 0;
+  opacity: 1;
   transition: all 0.3s ease-in;
+  visibility: visible;
+}
+.sidrbar--menu--overlay.hidden {
+  opacity: 0;
   visibility: hidden;
 }
-
 .sidebar--logo img {
   max-height: 30px;
 }
