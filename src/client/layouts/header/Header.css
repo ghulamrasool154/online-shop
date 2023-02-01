@@ -186,6 +186,7 @@ header {
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  padding-right: 20px;
 }
 
 .head--bottom--right .right--icon {
@@ -200,13 +201,13 @@ header {
   color: #09161d;
   transition: 0.35s;
   text-decoration: none;
-  padding-left: 15px;
+  padding-left: 12px;
 }
 
 span.cart--qty--icon {
   position: absolute;
   top: -24px;
-  right: -12px;
+  right: -20px;
   width: 35px;
   height: 35px;
   background: #bf9444;
@@ -363,6 +364,9 @@ ul.menu--list--for--mobile {
   header .top-bar {
     padding: 10px 0 !important;
   }
+  .head--bottom--right ul {
+    padding-right: 0;
+  }
 }
 @media screen and (max-width: 768px) {
   .head--bottom--left {
@@ -379,16 +383,29 @@ ul.menu--list--for--mobile {
   .top-bar.three .welcome-note p a {
     display: block;
   }
-  .head--bottom--left .header-logo img {
-    max-height: 20px;
+  .head--bottom--left {
+    width: 40%;
   }
+  .head--bottom--right {
+    width: 60%;
+  }
+
   .head--bottom--right span.right--text {
     display: none;
   }
   .head--bottom--right .right--icon {
-    font-size: 22px;
+    font-size: 20px;
   }
   span.cart--qty--icon {
-    right: -27px;
+    right: -15px;
+    width: 30px;
+    height: 30px;
+    font-size: 12px;
+  }
+  .mobile--burgur--icon {
+    padding-left: 25px;
+  }
+  .head--bottom--right a {
+    padding-left: 10px;
   }
 }
