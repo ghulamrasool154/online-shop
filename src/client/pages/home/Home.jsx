@@ -1,6 +1,6 @@
 import "./Home.css";
 import HeroSection from "../../components/Hero_Section/Hero_Section";
-import FeatureProduct from "../../components/feature/FeatureProduct";
+import FeatureProduct from "../../components/FeatureProducts/FeatureProduct";
 const Home = () => {
   return (
     <section className="home--page">
