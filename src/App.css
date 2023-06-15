@@ -35,6 +35,25 @@ a {
   padding: 0 6%;
 }
 
+/*  GLOBAL BUTTON  */
+
+.discover-btn {
+  background: linear-gradient(to right, #ffc3a0, #ef8b9c);
+  transition: all 0.5s ease-out;
+  font-family: "Roboto", sans-serif;
+  border: none;
+  padding: 0.8rem 4rem;
+  color: black;
+  text-transform: capitalize;
+  font-weight: bold;
+  letter-spacing: 1px;
+  max-width: fit-content;
+  border-radius: 0.2rem;
+}
+.discover-btn:hover {
+  background: linear-gradient(to right, #ef8b9c, #ffc3a0);
+}
+
 @media screen and (max-width: 1400px) {
   .global-width {
     padding: 0 50px;

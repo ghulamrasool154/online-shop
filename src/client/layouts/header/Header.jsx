@@ -3,7 +3,7 @@ import vectorright from "../../../assets/images/topbar-vec-right.png";
 import vectorleft from "../../../assets/images/topbar-vec-left.png";
 import headerlogo from "../../../assets/images/header2-logo.svg";
 import "./Header.css";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { toggleMenu } from "../../../redux/slice/mobileMenuSidebarSlice";
 const Header = () => {
@@ -23,7 +23,7 @@ const Header = () => {
                 <div className="welcome-note">
                   <p>
                     Welcome Our Restho Restaurant!{" "}
-                    <a href="reservation.html">For Private Event</a>
+                    <NavLink to="reservation">For Private Event</NavLink>
                   </p>
                 </div>
               </div>
@@ -39,10 +39,10 @@ const Header = () => {
                       </a>
                     </li>
                     <li>
-                      <a>
+                      <Link>
                         <i className="bi bi-geo-alt"></i>Road-01, Block-B, West
                         London City
-                      </a>
+                      </Link>
                     </li>
                   </ul>
                 </div>
@@ -64,19 +64,19 @@ const Header = () => {
                 <div className="main-menu">
                   <ul className="menu-list">
                     <li>
-                      <a href="#"> Home</a>
+                      <NavLink to="/"> Home</NavLink>
                     </li>
                     <li>
-                      <a href="about.html">About</a>
+                      <NavLink to="/about">About</NavLink>
                     </li>
                     <li>
-                      <a href="contact.html">Shop</a>
+                      <NavLink to="/contact">Shop</NavLink>
                     </li>
                     <li>
-                      <a href="about.html">About</a>
+                      <NavLink to="/about">About</NavLink>
                     </li>
                     <li>
-                      <a href="contact.html">Contact</a>
+                      <NavLink to="/contact">Contact</NavLink>
                     </li>
                   </ul>
                 </div>
@@ -84,26 +84,26 @@ const Header = () => {
               <div className="head--bottom--right">
                 <ul>
                   <li>
-                    <a href="">
+                    <Link to="/login">
                       <span className="right--icon">
                         <i className="bi bi-person-circle" />
                       </span>
                       <span className="right--text">Login</span>
-                    </a>
+                    </Link>
                   </li>
                   <li>
                     {" "}
-                    <a href="">
+                    <Link to="/register">
                       <span className="right--icon">
                         {" "}
                         <i className="bi bi-r-circle" />
                       </span>
                       <span className="right--text">Register</span>
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a
-                      href=""
+                    <Link
+                      to="/cart"
                       style={{
                         position: "relative",
                       }}
@@ -114,7 +114,7 @@ const Header = () => {
                       </span>
 
                       <span className="right--text"> Cart</span>
-                    </a>
+                    </Link>
                   </li>
 
                   <div
@@ -152,14 +152,14 @@ const Header = () => {
         </div>
         <ul className="menu--list--for--mobile">
           <li>
-            <Link to="/">Home</Link>
+            <Link to="/home">Home</Link>
           </li>
           <li>
-            <Link to="/">About</Link>
+            <Link to="/about">About</Link>
           </li>
 
           <li>
-            <Link to="/">Contact</Link>
+            <Link to="/contact">Contact</Link>
           </li>
 
           <li>
@@ -171,7 +171,7 @@ const Header = () => {
           </li>
 
           <li>
-            <Link to="/">Shop</Link>
+            <Link to="/shop">Shop</Link>
           </li>
         </ul>
       </aside>

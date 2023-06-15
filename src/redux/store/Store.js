@@ -1,8 +1,9 @@
 import { configureStore } from "@reduxjs/toolkit";
 import mobileSlice from "../slice/mobileMenuSidebarSlice";
+import { productSlice } from "../slice/productSlice";
 export const store = configureStore({
   reducer: {
     mobileSlice,
-    productSlice: [1, 2, 3, 4, 5],
+    products: productSlice,
   },
 });

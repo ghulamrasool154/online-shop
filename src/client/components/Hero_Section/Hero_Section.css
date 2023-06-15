@@ -1,10 +1,14 @@
+section.hero__section {
+  padding-bottom: 30px;
+}
+
 .hero__section .swiper-vertical>.swiper-wrapper {
-  height: 400px;
+  height: 500px;
 }
 
 .hero--section--left .left--bottom,
 .hero--section--left .left--top {
-  height: 200px;
+  height: 250px;
 }
 
 .hero--section--left .left--bottom {
@@ -15,48 +19,204 @@
   background-color: green;
 }
 
-/* 
-#hero {
-  background-image: url('../../../assets/images/hero4.png');
-  height: 90vh;
-  width: 100%;
+.hero__section__wrapp {
+  height: 100%;
   background-size: cover;
-  background-position: top 25% right 0;
-  padding: 0 80px;
-  display: flex;
-  align-items: center;
+  background-position: center right;
 }
 
-.offer {
+.box--no--01 {
+  background-image: url("../../../assets/images/slide-1.jpg");
+}
+
+.box--no--02 {
+  background-image: url("../../../assets/images/slide-2.jpg");
+}
+
+.box--no--03 {
+  background-image: url("../../../assets/images/slide-3.jpg");
+}
+
+.hero__box h3.hero__section_title {
+  font-size: 45px;
+  font-weight: bold;
+  line-height: normal;
+}
+
+h6.sub--title {
   font-size: 20px;
-  color: #222;
+  color: #777;
+  font-weight: 500;
+  font-family: "Fira Sans";
 }
 
-.deal {
-  font-size: 46px;
-  line-height: 54px;
-  color: #222;
+.hero__box .intro-price,
+.hero__box p {
+  font-size: 2.4rem;
 }
 
-.main-title {
-  color: #088178;
-  font-size: 50px;
-  line-height: 60px;
+.hero__box {
+  display: flex;
+  flex-direction: column;
+  width: 600px;
+  height: 100%;
+  justify-content: center;
+  padding-left: 100px;
 }
 
-.p {
-  font-size: 16px;
-  color: #465b52;
-  margin: 15px 0 20px 0;
+.hero__box p {
+  font-size: 22px;
+  line-height: 25px;
+  margin-bottom: 20px;
 }
 
-.shop-now {
-  background-color: transparent;
-  color: #088178;
-  border: 0;
-  padding: 14px 80px 14px 65px;
-  background-repeat: no-repeat;
-  cursor: pointer;
-  font-weight: 700;
-  font-size: 15px;
-} */
+.box--no--01 .hero__box {
+  color: white;
+}
+
+/*  */
+
+.gr--slider .swiper-pagination-bullet {
+  width: 15px;
+  height: 15px;
+  background: #5e5e5e;
+  opacity: 1;
+}
+
+span.swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background: #bf9444;
+}
+
+.hero--section--left {
+  border: 1px solid #eeeeee69;
+  height: 500px;
+  padding: 20px;
+  background-color: white;
+}
+
+h4.categories--tab {
+  padding: 0.7rem 1rem;
+  color: black;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+  margin-bottom: 0;
+  background-color: #ffc3a0;
+}
+
+.hero--section--category a {
+  background: transparent;
+  width: 100%;
+  display: block;
+  padding: 0.7rem 0.8rem;
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 400;
+  margin: 6px 0px;
+  border: 0.5px solid #bf944436;
+  font-size: 18px;
+  color: #09161d;
+  transition: 0.5s;
+}
+
+.hero--section--category a i {
+  min-width: 40px;
+}
+
+.hero--section--category a:hover {
+  color: white;
+  background: linear-gradient(to right, #ffc3a0, #ef8b9c);
+  border: 0.5px solid white;
+}
+
+.hero--section--category a.active {
+  background: linear-gradient(#ffc3a0, #ef8b9c59);
+}
+
+@media screen and (max-width: 1430px) {
+
+  .hero--section--left,
+  .hero__section .swiper-vertical>.swiper-wrapper {
+    height: 450px;
+  }
+
+  .hero--section--category a {
+    font-size: 16px;
+  }
+
+  .hero--section--category a i {
+    min-width: 32px;
+  }
+
+  .hero__box {
+    padding-left: 45px;
+  }
+
+  .hero__section__wrapp {
+    position: relative;
+  }
+
+  .hero__section__wrapp::before {
+    position: absolute;
+    inset: 0;
+    background-color: #000000a6;
+    content: "";
+  }
+
+  .hero__section__wrapp .hero__box {
+    position: relative;
+    z-index: 10;
+  }
+
+  h6.sub--title {
+    font-size: 18px;
+    color: #bfbebe;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .hero__section__wrapp .hero__box {
+    width: 100%;
+  }
+
+  .hero__box h3.hero__section_title {
+    color: white;
+  }
+
+  .hero__box p {
+    color: rgba(255, 255, 255, 0.747);
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  section.hero__section {
+    padding-top: 30px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .hero--section--left {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hero--section--left {
+    height: fit-content;
+  }
+
+  .hero__section .swiper-vertical>.swiper-wrapper {
+    height: 400px;
+  }
+
+  .hero__box h3.hero__section_title {
+    font-size: 35px;
+  }
+
+  .swiper-pagination-vertical.swiper-pagination-bullets,
+  .swiper-vertical>.swiper-pagination-bullets {
+    right: 20px;
+  }
+
+  .hero__box {
+    padding-left: 30px;
+  }
+}
