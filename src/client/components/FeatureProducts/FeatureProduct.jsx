@@ -7,6 +7,11 @@ const FeatureProduct = () => {
       <div className="container-fluid">
         <div className="row">
           <div className="col">
+            <h2 className="feature-title">Featured Products</h2>
+          </div>
+        </div>
+        <div className="row">
+          <div className="col">
             <div className="d-flex justify-content-between product-list">
               {[1, 2, 3, 4].map(() => {
                 return (
