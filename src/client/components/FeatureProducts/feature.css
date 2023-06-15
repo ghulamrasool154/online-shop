@@ -32,7 +32,15 @@
     object-fit: scale-down;
     background: #f4f4f4;
     padding: 0.8rem;
+    transition: 0.5s ease-in-out;
 }
+
+.item-product:hover .img-detail img {
+    transform: scale(1.2);
+    transition: 0.5s ease-in-out;
+}
+
+
 
 .item-product h5 {
     color: #1a1a1a;
