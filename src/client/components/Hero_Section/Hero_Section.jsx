@@ -88,6 +88,21 @@ const HeroSection = () => {
         </div>
       </div>
     </div>
+    // <section id="hero">
+    //   <div className="container-xxl">
+    //     <div className="row">
+    //       <div className="col">
+    //         <h4 className="offer">Trade-in-offer</h4>
+    //         <h2 className="deal">Super Value deals</h2>
+    //         <h1 className="main-title">On all products</h1>
+    //         <p className="p">Save more with coupons &amp; up to 70% off!</p>
+    //         <a href="/shop" className="shop-now">
+    //           Shop Now
+    //         </a>
+    //       </div>
+    //     </div>
+    //   </div>
+    // </section>
   );
 };
 
